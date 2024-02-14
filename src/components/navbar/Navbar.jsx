@@ -49,7 +49,7 @@ const Navbar = () => {
                   </button>
                   <Link
                     onClick={handleHideDropdown}
-                    href="/create-post"
+                    href="/create-blog"
                     className={classes.create}
                   >
                     Create
