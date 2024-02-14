@@ -11,7 +11,7 @@ import { verifyJwtToken } from "@/lib/jwt";
 export async function GET(req) {
   await db.connect();
   try {
-    const blogs = await Blog.find({}).limit(16).populate("authorId");
+    const blogs = await Blog.find({}).limit(16).populate("authorId"); //.limit(16): This method is limiting the number of documents returned by the query to 16. This means that even if there are more than 16 documents in the Blog collection that match the query criteria, only the first 16 documents will be returned.
     return new Response(JSON.stringify(blogs), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify(null), { status: 500 });
