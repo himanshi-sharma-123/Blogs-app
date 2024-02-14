@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import person from "../../../public/person.png";
 import { AiOutlineClose } from "react-icons/ai";
+import { signIn, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -36,7 +37,10 @@ const Navbar = () => {
                     onClick={handleHideDropdown}
                   />
                   <button
-                    onClick={handleHideDropdown}
+                    onClick={() => {
+                      signOut();
+                      handleHideDropdown();
+                    }}
                     className={classes.logout}
                   >
                     Logout
@@ -53,7 +57,14 @@ const Navbar = () => {
             </div>
           ) : (
             <>
-              <button className={classes.login}>Log in</button>
+              <button
+                onClick={() => {
+                  signIn();
+                }}
+                className={classes.login}
+              >
+                Log in
+              </button>
               <Link href="/register">Register</Link>
             </>
           )}
