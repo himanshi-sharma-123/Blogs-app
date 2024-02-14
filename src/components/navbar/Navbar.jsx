@@ -6,10 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import person from "../../../public/person.png";
 import { AiOutlineClose } from "react-icons/ai";
-import { signIn, signOut } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { data: session } = useSession();
+
   const handleShowDropdown = () => setShowDropdown((prev) => true);
   const handleHideDropdown = () => setShowDropdown((prev) => false);
 
@@ -21,7 +23,7 @@ const Navbar = () => {
           <Link href="/">Blogs-App</Link>
         </h2>
         <ul className={classes.right}>
-          {loggedIn ? (
+          {session?.user ? (
             <div>
               <Image
                 onClick={handleShowDropdown}
