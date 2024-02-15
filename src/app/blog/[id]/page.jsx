@@ -85,6 +85,7 @@ const page = (ctx) => {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
+        <h1>Blog Zoom in</h1>
         <Image src={blogDetails?.imageUrl} width="750" height="650" alt="" />
         <div className={classes.row}>
           <h3 className={classes.title}>{blogDetails?.title}</h3>
