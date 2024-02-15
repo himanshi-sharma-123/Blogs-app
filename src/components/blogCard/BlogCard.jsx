@@ -7,7 +7,9 @@ import Link from "next/link";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 import { useSession } from "next-auth/react";
 
-const BlogCard = ({ blog: { title, desc, imgUrl, likes, authorId, _id } }) => {
+const BlogCard = ({
+  blog: { title, desc, imageUrl, likes, authorId, _id },
+}) => {
   const { data: session } = useSession();
   const [isLiked, setIsLiked] = useState(false);
   const [blogLikes, setBlogLikes] = useState(0);
@@ -44,7 +46,7 @@ const BlogCard = ({ blog: { title, desc, imgUrl, likes, authorId, _id } }) => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <Link className={classes.imgContainer} href={`/blog/${_id}`}>
-          <Image src={imgUrl} width="350" height="350" />
+          <Image src={imageUrl} width="350" height="350" alt="" />
         </Link>
         <div className={classes.blogData}>
           <div className={classes.left}>
