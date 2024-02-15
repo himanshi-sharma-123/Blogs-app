@@ -57,8 +57,31 @@ const page = (ctx) => {
       console.log(error);
     }
   };
-  const handleLike = async () => {};
+  const handleLike = async () => {
+    try {
+      const res = await fetch(
+        `http://localhost:3000/api/blog/${ctx.params.id}/like`,
+        {
+          headers: {
+            Authorization: `Bearer ${session?.user?.accessToken}`,
+          },
+          method: "PUT",
+        }
+      );
 
+      if (res.ok) {
+        if (isLiked) {
+          setIsLiked((prev) => !prev);
+          setBlogLikes((prev) => prev - 1);
+        } else {
+          setIsLiked((prev) => !prev);
+          setBlogLikes((prev) => prev + 1);
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
