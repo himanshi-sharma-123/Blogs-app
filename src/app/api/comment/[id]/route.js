@@ -33,11 +33,14 @@ export async function DELETE(req, ctx) {
     if (comment.authorId._id.toString() !== decodedToken._id.toString()) {
       return new Response(
         JSON.stringify({ msg: "Only its author can delete this blog" }),
-        { status: 200 }
+        { status: 401 }
       );
     }
     await Comment.findByIdAndDelete(id);
-    return new Response(JSON.stringify(null), { status: 500 });
+    return new Response(
+      JSON.stringify({ msg: "Successfully deleted comment" }),
+      { status: 200 }
+    );
   } catch (error) {
     return new Response(JSON.stringify(null), { status: 500 });
   }
