@@ -67,7 +67,9 @@ const Navbar = () => {
               >
                 Log in
               </button>
-              <Link href="/register">Register</Link>
+              <Link className={classes.register} href="/register">
+                Register
+              </Link>
             </>
           )}
         </ul>

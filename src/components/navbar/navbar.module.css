@@ -3,7 +3,8 @@
   z-index: 999;
   height: 60px;
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
+  background-color: black;
   box-shadow: 2px 5px 27px -8ox rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -30,6 +31,8 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  color: green;
+  font-size: large;
 }
 
 .right > div > img {
@@ -91,4 +94,42 @@
   position: absolute;
   top: 0.3rem;
   right: 0.3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  .left {
+    font-size: 24px;
+  }
+
+  .right {
+    font-size: medium;
+  }
+
+  .logout {
+    font-size: 15px;
+  }
+
+  .create {
+    font-size: 16px;
+  }
+
+  .login {
+    font-size: 15px;
+  }
+
+  .dropdown {
+    right: 1rem;
+  }
 }
