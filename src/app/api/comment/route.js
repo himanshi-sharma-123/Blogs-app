@@ -21,6 +21,7 @@ export async function POST(req) {
 
     let newComment = await Comment.create(body);
     newComment = await newComment.populate("authorId");
+    return new Response(JSON.stringify(newComment), { status: 201 });
   } catch (error) {
     return new Response(JSON.stringify(null), { status: 500 });
   }
