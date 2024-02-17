@@ -13,7 +13,7 @@ const Comment = ({ comment, setComments }) => {
   const handleDeleteComment = async () => {
     try {
       await fetch(
-        `https://blogs-app-web.vercel.app//api/comment/${comment?._id}`,
+        `https://blogs-app-web.vercel.app/api/comment/${comment?._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ export default Comment;
 
 //   const handleDeleteComment = async () => {
 //     try {
-//       await fetch(`https://blogs-app-web.vercel.app//api/comment/${comment?._id}`, {
+//       await fetch(`https://blogs-app-web.vercel.app/api/comment/${comment?._id}`, {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },

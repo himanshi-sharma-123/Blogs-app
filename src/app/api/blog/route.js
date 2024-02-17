@@ -1,7 +1,7 @@
-// https://blogs-app-web.vercel.app//api/blog
+// https://blogs-app-web.vercel.app/api/blog
 
 //files inside must be named as route.js
-// https://blogs-app-web.vercel.app//api/blog/someId
+// https://blogs-app-web.vercel.app/api/blog/someId
 
 import db from "@/lib/db";
 import { verifyJwtToken, verifyToken } from "@/lib/jwt";
