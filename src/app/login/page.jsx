@@ -59,7 +59,7 @@ const Login = () => {
           />
           <button className={classes.submitButton}>Log in</button>
           <Link className={classes.loginNow} href="/register">
-            Don't have an account? <br />
+            Don&apos;t have an account? <br />
             Register now.
           </Link>
         </form>
