@@ -8,7 +8,7 @@ import { AiOutlineFileImage } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //add this line
 
-const page = (ctx) => {
+const Edit = (ctx) => {
   const CLOUD_NAME = "daext86rr";
   const UPLOAD_PRESET = "blog_app";
 
@@ -158,4 +158,4 @@ const page = (ctx) => {
   );
 };
 
-export default page;
+export default Edit;
