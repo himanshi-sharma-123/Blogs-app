@@ -1,4 +1,4 @@
-// http://localhost:3000/api/register
+// https://blogs-app-web.vercel.app//api/register
 
 import db from "@/lib/db";
 import bcrypt from "bcrypt";

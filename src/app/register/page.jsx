@@ -24,13 +24,16 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/register", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({ username, email, password }),
-      });
+      const res = await fetch(
+        "https://blogs-app-web.vercel.app//api/register",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({ username, email, password }),
+        }
+      );
 
       console.log(await res.json());
 
