@@ -19,3 +19,10 @@
   margin-top: 1.5rem;
   font-size: 32px;
 }
+
+.hero {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
