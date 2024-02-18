@@ -27,7 +27,8 @@ const Navbar = () => {
             <div>
               <Image
                 onClick={handleShowDropdown}
-                src={person}
+                // src={person}
+                src={session.user.profileImage}
                 width="45"
                 height="45"
                 alt=""
