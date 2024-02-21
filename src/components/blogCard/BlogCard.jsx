@@ -55,9 +55,9 @@ const BlogCard = ({
           <div className={classes.left}>
             <h3>{title}</h3>
             <p>{desc}</p>
-            <span>
+            {/* <span>
               Created By: <span>1st of January</span>
-            </span>
+            </span> */}
           </div>
           <div className={classes.right}>
             {blogLikes}{" "}
